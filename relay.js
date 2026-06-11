@@ -27,7 +27,7 @@ const server = http.createServer((req, res) => {
 
   // Serve the HTML remote
   if (req.url === '/' || req.url === '/index.html') {
-    const htmlPath = path.join(__dirname, 'Remote Tizen.html');
+  const htmlPath = path.join(__dirname, 'index.html');
     if (fs.existsSync(htmlPath)) {
       res.writeHead(200, { 'Content-Type': 'text/html' });
       res.end(fs.readFileSync(htmlPath));
